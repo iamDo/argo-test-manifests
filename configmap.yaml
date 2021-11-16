@@ -1,6 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: argotest
   name: argo-test-configmap
 data:
-  somevalue: "Hello, World!"
+  index.html: |
+    <html>
+    <body>
+    <h1>Hello, world!</h1>
+    </body>
+    </html>

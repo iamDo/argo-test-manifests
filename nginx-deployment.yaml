@@ -20,3 +20,10 @@ spec:
           image: nginx
           ports:
           - containerPort: 80
+          volumeMounts:
+            - name: argo-test-configmap-volume
+              mountPath: /usr/share/nginx/html/index.html
+              subPath: index.html
+      volumes:
+        - name: argo-test-configmap-volume
+          configMap: argo-test-configmap
