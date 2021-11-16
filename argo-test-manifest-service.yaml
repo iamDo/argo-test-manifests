@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
-  namespace: argotest
+  name: argo-test-manifest-nginx-service
+  namespace: argo-test-manifest
 spec:
   selector:
     app: nginx

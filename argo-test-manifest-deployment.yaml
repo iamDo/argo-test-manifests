@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: argotest
+  name: argo-test-manifest-nginx-deployment
+  namespace: argo-test-manifest
   labels:
     app: nginx
 spec:
@@ -21,10 +21,10 @@ spec:
           ports:
           - containerPort: 80
           volumeMounts:
-            - name: argo-test-configmap-volume
+            - name: argo-test-manifest-configmap-volume
               mountPath: /usr/share/nginx/html/index.html
               subPath: index.html
       volumes:
-        - name: argo-test-configmap-volume
+        - name: argo-test-manifest-configmap-volume
           configMap:
-            name: argo-test-configmap
+            name: argo-test-manifest-configmap
