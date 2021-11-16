@@ -26,4 +26,5 @@ spec:
               subPath: index.html
       volumes:
         - name: argo-test-configmap-volume
-          configMap: argo-test-configmap
+          configMap:
+            name: argo-test-configmap
